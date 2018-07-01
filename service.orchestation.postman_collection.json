@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "354df16f-3cb7-4470-2b6e-f6cff8ae8fe8",
+		"name": "service.orchestation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Eureka Server info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8090/management/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"management",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Config Server Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8091/management/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"management",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account Rest Api Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8081/management/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"management",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account Rest Api - Get Account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8081/account/34",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"account",
+						"34"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Billing Rest Api Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8082/management/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"management",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Billing Rest Api  - Get Invoices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8082/billing/account/8675/invoice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"billing",
+						"account",
+						"8675",
+						"invoice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account Rest Api - Message from Config Server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8081/message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Billing Rest Api  - Message from Config Server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8082/message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account Rest Api Refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8081/management/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"management",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Billing Rest Api Refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8082/management/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"management",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
