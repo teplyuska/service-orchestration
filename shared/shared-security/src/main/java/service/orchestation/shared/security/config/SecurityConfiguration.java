@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @Configuration
@@ -37,6 +38,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .roles("hest")
                 .build();
 
-        return Arrays.asList(restApiUser);
+        return Collections.singletonList(restApiUser);
     }
 }

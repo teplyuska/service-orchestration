@@ -39,19 +39,9 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${org.springframework-version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${org.springframework.boot-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.beust</groupId>
-            <artifactId>jcommander</artifactId>
-            <version>${com.beust.jcommander-version}</version>
         </dependency>
     </dependencies>
 
@@ -60,7 +50,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud-dependencies.version}</version>
+                <version>${spring-cloud-dependencies-version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -75,7 +65,6 @@
                 <version>${spring-boot-maven-plugin-version}</version>
                 <configuration>
                     <executable>true</executable>
-                    <!-- <fork>true</fork> -->
                     <mainClass>service.orchestation.account.restapi.AccountRestApiAppInit</mainClass>
                 </configuration>
                 <executions>

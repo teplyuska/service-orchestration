@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * If eureka is on your classpath, they are effectively the same.
  */
 @Configuration
-@EnableEurekaClient
+// @EnableEurekaClient
 @EnableDiscoveryClient
 // @ComponentScan("service.orchestation.shared.eurekaclient.service")
 public class EurekaClientConfig {
