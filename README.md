@@ -1,4 +1,4 @@
-##Initial Notes  
+## Initial Notes  
 
  - All security is disabled for now  
  - Actuator endpoints are configured to be located on /management/\*  
@@ -6,7 +6,7 @@
  - All modules can be build with maven by using the master pom in the root directory.  
  - Attempt to manage depencency imports in shared-\* modules so one can pick and choose when creating a new \*-rest-api  
  
-####Warning
+#### Warning
 
 WARNING: An illegal reflective access operation has occurred  
 WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:.../xstream-1.4.10.jar) to field java.util.TreeMap.comparator  
@@ -16,14 +16,14 @@ WARNING: All illegal access operations will be denied in a future release
 
 https://github.com/x-stream/xstream/issues/101
 
-##System setup  
+## System setup  
 
 Edit your hosts file so that "so-eureka" points to the location of your eureka server.
 
 Windows C:\Windows\System32\drivers\etc\hosts:
  - 127.0.0.1 so-eureka
  
-####config-server git repository
+#### config-server git repository
 
 Initialize a git repository. We need the path for this repository later.
 
@@ -57,7 +57,7 @@ server.port=8082
 
 It is important to note that the config-server reads the files in the most recent commit, so be sure to commit the changes or it will not be picked up.
  
-####Run apps:  
+#### Run apps:  
 
 **1. Start eureka-server with options:**
 
@@ -85,7 +85,7 @@ The config server will register with the eureka-server so other apps can discove
 _-Dspring.profiles.active=dev_  
 _-Deureka.client.serviceUrl.defaultZone=http://so-eureka:8090/eureka/_
     
-####Eureka
+#### Eureka
     
 Using eureka-server on "http://so-eureka:8090/eureka/"  
  - The \*-rest-api will register it self with the eureka-server so other apps can locate it.
@@ -104,7 +104,7 @@ If you intend to use JDK 11 when running a Eureka server you must include these 
 source: https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html#_jdk_11_support  
 see: eureka-server pom
 
-####Config
+#### Config
     
 Every app contains a bootstrap.properties  
 This file contains all the configurations that needs to be available before reaching the eureka-server and config-server.  
@@ -119,7 +119,7 @@ If the config-server is not available the \*-rest-api will retry a configured am
     
 You can try this out by starting account-rest-api and then the config-server.
 
-##Update application properties runtime using config-server:
+## Update application properties runtime using config-server:
 
 The account-rest-api and billing-rest-api both have a TestController which returns the configuration "message" on .../message
 
@@ -129,7 +129,7 @@ The account-rest-api and billing-rest-api both have a TestController which retur
 4) Send POST request to the actuator refresh endpoint of the app of which you have updated properties (.../management/refresh)  
 5) Check the .../message endpoint where the new message config should be returned.  
 
-##Using Feign Client with Eureka Service Discovery
+## Using Feign Client with Eureka Service Discovery
 
 All of the above is really done to facilitate this functionality. This is where one can easily build new services.
 
